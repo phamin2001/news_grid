@@ -6,7 +6,7 @@
   --max-width: 1100px;
 }
 
-.catagory {
+.category {
   --sports-color: #f99500;
   --ent-color: #a66bbe;
   --tech-color: #009cf f;
@@ -60,6 +60,53 @@ h6 {
   overflow: hidden;
 }
 
+.category {
+  display: inline-block;
+  color: #fff;
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  padding: 0.4rem 0.6rem;
+  border-radius: 15px;
+  margin-bottom: 0.5rem;
+}
+
+.category-sports {
+  background-color: var(--sports-color);
+}
+.category-ent {
+  background-color: var(--ent-color);
+}
+.category-tech {
+  background-color: var(--tech-color);
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+}
+
+.btn-light {
+  background-color: var(--light-color);
+}
+.btn-primary {
+  background-color: var(--primary-color);
+}
+.btn-secondary {
+  background-color: var(--seconday-color);
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
 /* Navigation */
 #main-nav {
   background-color: #fff;
@@ -109,4 +156,48 @@ h6 {
 #main-nav .social i {
   color: #777;
   margin-right: 0.5rem;
+}
+
+/* Showcase */
+#showcase {
+  color: #fff;
+  background: #333;
+  padding: 2rem;
+  /* we want to add an image useing 
+  ::before sudo selector therefor we needs 
+  position: relative */
+  position: relative;
+}
+
+#showcase::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('../img/featured.jpg') no-repeat center center/cover;
+  /* We want an image goes all the way the cross */
+  width: 100%;
+  /* same for height */
+  height: 100%;
+  opacity: 0.4;
+}
+
+#showcase .showcase-container {
+  display: grid;
+  /* We want to take half the space 
+  don't forget we only have one item grid*/
+  grid-template-columns: repeat(2, 1fr);
+  justify-self: center;
+  align-items: center;
+  /* make height of a showcase half the view port */
+  height: 50vh;
+}
+
+/* we need .showcase-content that raps all the text */
+#showcase .showcase-content {
+  z-index: 1;
+}
+
+#showcase .showcase-content p {
+  margin-bottom: 1rem;
 }
