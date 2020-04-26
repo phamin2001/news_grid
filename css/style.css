@@ -33,6 +33,10 @@ ul {
   list-style: none;
 }
 
+p {
+  margin: 0.5rem 0;
+}
+
 /* Image by default stretches beyound their containers
 therefor we say: */
 img {
@@ -159,6 +163,17 @@ h6 {
 .p-3 {
   padding: 3rem 0;
 }
+
+.list li {
+  padding: 0.5rem 0;
+  border-bottom: #555 dotted 1px;
+  width: 90%;
+}
+
+.list li a:hover {
+  /* If color doesn't work add !important */
+  color: var(--primary-color) !important;
+}
 /* Navigation */
 #main-nav {
   background-color: #fff;
@@ -271,4 +286,44 @@ h6 {
 
 #home-articles .articles-contaiiner > *:last-child {
   grid-column: 2 / span 2;
+}
+
+/* Footer */
+#main-footer {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+
+/* Picture is too big at this point */
+#main-footer img {
+  width: 150px;
+}
+
+#main-footer a {
+  color: #fff;
+}
+
+#main-footer .footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-gap: 1.5rem; */
+  gap: 1.5rem;
+}
+
+#main-footer .footer-container > *:last-child {
+  background-color: #444;
+  grid-column: 1 / span 4;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+#main-footer .footer-container input[type='email'] {
+  width: 90%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#main-footer .footer-container input[type='submit'] {
+  width: 90%;
 }
