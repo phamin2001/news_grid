@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="css/mobile.css"
+    />
+    <!-- Force to reload a browser: command + shift + R -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <title>NewsGrid | Latest News</title>
+  </head>
+
+  <body>
+    <!-- We want navbar as grid, but if we set nav as grid
+    it will put a <div class="container"> as a grid item
+      we don't want this -->
+    <nav id="main-nav">
+      <!-- Therefo we put this div as a grid-->
+      <div class="container">
+        <img src="img/logo.png" alt="NewsGrid" class="logo" />
+        <div class="social">
+          <a href="https://facebook.com" target="_blank"
+            ><i class="fab fa-facebook fa-2x"></i
+          ></a>
+          <a href="https://twitter.com" target="_blank"
+            ><i class="fab fa-twitter fa-2x"></i
+          ></a>
+          <a href="https://instagram.com" target="_blank"
+            ><i class="fab fa-instagram fa-2x"></i
+          ></a>
+          <a href="https://youtube.com" target="_blank"
+            ><i class="fab fa-youtube fa-2x"></i
+          ></a>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Section -->
+    <section id="article">
+      <!-- Alighn everything to the middle -->
+      <div class="container">
+        <!-- Grid Container -->
+        <div class="page-container">
+          <article class="card">
+            <img src="img/articles/ent1.jpg" alt="" />
+            <h1 class="l-heading">Lorem ipsum dolor sit amet.</h1>
+            <!-- In CSS we are using flex box for display,
+            we have 2 flex items in the container -->
+            <div class="meta">
+              <small>
+                <i class="fas fa-user"></i> Written By John Doe January 12, 2020
+              </small>
+              <div class="category category-ent">Entertainment</div>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Reiciendis nisi itaque libero eos, culpa temporibus ex dicta
+              perspiciatis consequatur quod totam, sed unde fuga blanditiis
+              mollitia debitis error iusto, nemo ipsam quis sit. Nulla corrupti
+              debitis eum sapiente dolorem quisquam cum voluptatum odit illo
+              esse quibusdam, voluptates cupiditate modi architecto.
+            </p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab unde
+              deserunt aliquid totam, sapiente sunt aspernatur qui sed, magni
+              illo est enim omnis saepe, dolorum dolore maxime nemo repellat rem
+              voluptatum eaque odit incidunt non. Vel magnam labore repellat
+              enim maiores officia architecto nulla corrupti? Amet non deleniti
+              laudantium voluptatem deserunt ipsum corrupti praesentium vero
+              odit. Suscipit doloribus corrupti velit, nihil cum a. Fugit quia
+              fuga officia. Eveniet officiis dignissimos impedit ut quibusdam
+              consequuntur. Cumque, iure voluptatem ea numquam alias provident
+              nihil fuga dicta. Voluptate omnis culpa tempore iure suscipit quo
+              unde perspiciatis, illo modi dolor accusamus earum molestias optio
+              rem ullam ea necessitatibus laborum est consequuntur. Ab eligendi
+              dolore, unde repellendus commodi sapiente asperiores reiciendis
+              animi amet voluptates vero enim rerum nisi. Dolorum reiciendis
+              sunt nulla voluptas quis eveniet possimus praesentium vero nostrum
+              quod quae ipsam ut est ex cumque assumenda eaque iusto,
+              accusantium doloremque? Non pariatur sint autem?
+            </p>
+          </article>
+
+          <aside id="categories" class="card">
+            <h2>Categories</h2>
+            <ul class="list">
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i> Sports</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-chevron-right"></i> Entertainment</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i> Technology</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i> Fasion</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i> Shopping</a>
+              </li>
+            </ul>
+          </aside>
+
+          <aside class="card bg-secondary">
+            <h2>Join Our Club</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
+              accusamus?
+            </p>
+            <a href="#" class="btn btn-dark btn-block">Join Now</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="main-footer" class="py-2">
+      <!-- We need a container to move everything to the middle -->
+      <!-- It's actual grid container -->
+      <div class="container footer-container">
+        <!-- Basicly we have 5 divs: repeat(4, 1fr)
+        and next one will span across all the way -->
+        <div>
+          <img src="img/logo_light.png" alt="NewsGrid" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem,
+            eligendi quae obcaecati rerum minima aspernatur ad blanditiis veniam
+            maxime qui?
+          </p>
+        </div>
+        <div>
+          <h3>Email Newslettr</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <form>
+            <input type="email" placeholder="Enter Email..." />
+            <input type="submit" value="Sybscribe" class="btn btn-primary" />
+          </form>
+        </div>
+        <div>
+          <h3>Site Links</h3>
+          <ul class="list">
+            <li><a href="#">Help & Sypport</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Join Our Club</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error,
+            quo!
+          </p>
+          <a href="#" class="btn btn-secondary">Join Now</a>
+        </div>
+        <div>
+          <p>
+            Copyright &copy; 2020, All Rights Reseved
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
